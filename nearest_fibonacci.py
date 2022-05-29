@@ -1,0 +1,19 @@
+n=int(input())#4#10
+a,b=0,1
+while(True):
+    c=a+b
+    if(c>n):#13>10
+       h1=b#3#13
+       h2=c#5#13
+       break
+    a=b
+    b=c
+#print(h1,h2)
+x1=abs(h1-n)#1
+x2=abs(h2-n)#1
+if(x1==x2):
+   print(h1,h2)
+elif(x1>x2):
+   print(h2)
+else:
+   print(h1)
