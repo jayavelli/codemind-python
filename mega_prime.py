@@ -1,26 +1,19 @@
-def is_prime(n):
-    c=0
-    flag=1
-    for i in range(1,n+1):
-        if n%i==0:
-            c+=1
-    if c==2:
-        return flag
+def prime(n):
+    if n==1:
+        return False
     else:
-        return 0
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
+                return False
+        return True
 n=int(input())
-if(is_prime(n)):
-    r=0
-    v=0
-    while(n>0):
-        d=n%10
-        if(is_prime(d)):
-            r+=1
-        v+=1
-        n=n//10
-    if v==r:
-        print("Mega Prime")
-    else:
-        print("Not Mega Prime")
+l=len(str(n))
+c=0
+if prime(n):
+    for j in str(n):
+        if prime(int(j)):
+            c+=1
+if c==l:
+    print("Mega Prime")
 else:
     print("Not Mega Prime")
