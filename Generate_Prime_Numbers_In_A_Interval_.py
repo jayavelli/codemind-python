@@ -1,8 +1,13 @@
+def prime(n):
+    if n==1:
+        return False
+    else:
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
+                return False
+        return True
 n=int(input())
 m=int(input())
-for i in range(n+1,m+1):
-    for j in range(2,i):
-        if(i%j==0):
-            break
-    else:
+for i in range(n,m+1):
+    if prime(i):
         print(i)
