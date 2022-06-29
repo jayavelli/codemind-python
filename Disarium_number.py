@@ -1,14 +1,15 @@
 import math
-n=int(input())
-t=n
-res=0
+t=int(input())
+n=t
 d=int(math.log10(n)+1)
-while(t!=0):
-    r=t%10
+res=0
+while(n!=0):
+    r=n%10
     res=res+r**d
-    t//=10
+    n//=10
     d-=1
-if(res==n):
+if res==t:
     print("True")
+
 else:
     print("False")
