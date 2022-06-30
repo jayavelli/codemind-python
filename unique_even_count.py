@@ -1,9 +1,8 @@
 n=int(input())
 a=list(map(int,input().split()))
-k=[]
-s=0
-for i in range(n):
-    if a[i]%2==0:
-        if a[i] not in k:
-            k.append(a[i])
-print(len(k))
+c=0
+a=set(a)
+for i in a:
+    if i%2==0:
+        c+=1
+print(c)
