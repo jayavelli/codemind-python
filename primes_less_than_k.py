@@ -8,12 +8,13 @@ def prime(n):
         return True
 n=int(input())
 a=list(map(int,input().split()))
-b=int(input())
-s=0
+k=int(input())
 c=0
+s=0
+
 for i in range(n):
-    if a[i]<=b and prime(a[i]):
+    if prime(a[i]) and a[i]<=k:
         
         c+=1
-
 print(c)
+    
