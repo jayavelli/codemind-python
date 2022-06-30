@@ -1,19 +1,10 @@
-def rev(n):
-    p=n
-    r=0
-    while n:
-        k=n%10
-        r=r*10+k
-        n//=10
-    if p==r:
-        return True
-    else:
-        return False
-
 n=int(input())
 a=list(map(int,input().split()))
 c=0
 for i in range(n):
-    if rev(a[i]):
+    k=str(a[i])
+    m=k[::-1]
+    if m==k:
         c+=1
 print(c)
+    
