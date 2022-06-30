@@ -1,12 +1,11 @@
 n=int(input())
 a=list(map(int,input().split()))
-b,c=map(int,input().split())
-d=0
-min=0
-s=0
-for i in range(n):
-    if a[i]>=b and a[i]<=c:
-        d+=1
-        print(a[i],end=' ')
-if d==0:
+k,l=map(int,input().split())
+s=[]
+for i in a:
+    if i>=k and i<=l:
+        s.append(i)
+if len(s)>0:
+    print(*s)
+else:
     print(-1)
