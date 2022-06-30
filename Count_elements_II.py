@@ -1,14 +1,16 @@
-
 n,m=map(int,input().split())
 a=list(map(int,input().split()))
 b=list(map(int,input().split()))
-
-k=[]
-for i in range(n):
-    if a[i] not in b and a[i] not in k:
-        k.append(a[i])
-for i in range(m):
-    if b[i] not in a and b[i] not in k:
-        k.append(b[i])
-print(len(k))
+k=set(a)
+v=set(b)
+k=list(k)
+v=list(v)
+c=0
+for i in range (len(k)):
     
+    if k[i] not in v:
+        c+=1
+for i in range (len(v)):
+    if v[i] not in k:
+        c+=1
+print(c)
