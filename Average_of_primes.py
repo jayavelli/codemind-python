@@ -8,11 +8,12 @@ def prime(n):
         return True
 n=int(input())
 a=list(map(int,input().split()))
-s=0
 c=0
+s=0
+
 for i in range(n):
     if prime(a[i]):
         s+=a[i]
         c+=1
-a=s/c
-print("%.2f"%a)
+avg=s/c
+print("%.2f"%avg)
