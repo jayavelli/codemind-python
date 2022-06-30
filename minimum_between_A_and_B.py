@@ -1,16 +1,11 @@
 n=int(input())
 a=list(map(int,input().split()))
-b,c=map(int,input().split())
-d=0
-min=999
+k,l=map(int,input().split())
+s=[]
 for i in range(n):
-    if a[i]>=b and a[i]<=c:
-        d+=1
-        if a[i]<min:
-            min=a[i]
-if d==0:
-    print(-1)
+    if a[i]>=k and a[i]<=l:
+        s.append(a[i])
+if len(s)>0:
+    print(min(s))
 else:
-    print(min)
-    
-        
+    print(-1)
