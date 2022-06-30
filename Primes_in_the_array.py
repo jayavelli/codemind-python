@@ -9,11 +9,12 @@ def prime(n):
 n=int(input())
 a=list(map(int,input().split()))
 
-s=0
 c=0
+s=0
+
 for i in range(n):
-    if prime(a[i]):
+    if prime(a[i]) :
         
         c+=1
-
 print(c)
+    
