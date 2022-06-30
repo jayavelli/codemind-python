@@ -1,11 +1,13 @@
 n=int(input())
 a=list(map(int,input().split()))
 
-d=0
-min=999
+c=0
 for i in range(n):
     if a[i]%2!=0:
         break
-    d+=a[i]
-print(d)
+    else:
+        c+=a[i]
         
+   
+        #c+=i
+print(c)
