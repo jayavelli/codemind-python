@@ -1,8 +1,7 @@
 n=int(input())
 a=list(map(int,input().split()))
-s=0
-min=999
 c=0
+min=9999
 for i in range(n):
     if len(str(a[i]))<min:
         min=len(str(a[i]))
