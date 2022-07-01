@@ -1,16 +1,15 @@
 n=int(input())
 a=list(map(int,input().split()))
-l=a[0]
-h=a[n-1]
-f=0
-for i in range(0,n):
-    m=(l+h)//2
-    if(a[i]==m):
-        f=1
+c=0
+s=0
+avg=0
+for i in range(n):
+    s+=a[i]
+avg=s//n
+for i in range(n):
+    if avg==a[i]:
+        print(True)
         break
-    else:
-        f=0
-if(f==1):
-    print("True")
 else:
-    print("False")
+    print(False)
+    
