@@ -1,11 +1,11 @@
 n=int(input())
 a=list(map(int,input().split()))
-k=n//2
-d=0
 s=0
-min=999
-for i in range(k):
-    d+=a[i]
-for i in range(k,n):
+s2=0
+for i in range(n//2):
     s+=a[i]
-print(abs(d-s))
+for i in range(n//2,n):
+    s2+=a[i]
+    
+k=abs(s2-s)
+print(k)
