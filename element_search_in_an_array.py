@@ -1,11 +1,13 @@
 n=int(input())
 a=list(map(int,input().split()))
-x=int(input())
-f=0
-for i in range(0,n):
-    if(a[i]==x):
-        f=1
-if(f==1):
-    print("True")
+k=int(input())
+c=0
+for i in range(n):
+    if a[i]==k:
+        c+=1
+        break
+if c>0:
+    print(True)
 else:
-    print("False")
+    print(False)
+        
