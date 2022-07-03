@@ -1,15 +1,12 @@
 p=input()
-s=p.lower()
-k=[]
-l=[]
-a='abcdefghijklmnopqrstuvwxyz'
+n=p.lower()
+
+k=''
+for i in n:
+    if i not in k and ord(i)!=32:
+        k+=i
+s=list(k)
+s.sort()
 for i in s:
-   if s.count(i)==1:
-        k.append(i)
-        
-for i in a:
-    if i in k:
-        l.append(i)
-m=''.join(l)
-print(m)
-        
+    print(i,end='')
+    
