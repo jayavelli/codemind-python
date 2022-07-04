@@ -1,13 +1,14 @@
 a,b=map(int,input().split())
-l=[]
-for i in range(a):
-    k=list(map(int,input().split()))
-    if len(k)==b:
-        l.append(k)
-        
-e=0
+s=0
+k=[]
 o=0
+max=0
+for i in range(a):
+    n=list(map(int,input().split()))
+    if len(n)==b:
+        k.append(n)
 for i in range(a):
     for j in range(b):
-        e+=l[i][j]
-print(e)
+        s+=k[i][j]
+print(s)
+        
