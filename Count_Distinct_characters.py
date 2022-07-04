@@ -1,11 +1,7 @@
 p=input()
-n=p.lower()
-
-k=''
-for i in n:
-    if i not in k and ord(i)!=32:
-        k+=i
-s=list(k)
-s.sort()
-print(len(s))
-    
+p=p.lower()
+p=p.split()
+p=''.join(p)
+p=sorted(p)
+p=set(p)
+print(len(p))
