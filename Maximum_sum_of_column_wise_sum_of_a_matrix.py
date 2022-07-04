@@ -1,17 +1,15 @@
 a,b=map(int,input().split())
-l=[]
+s=0
+k=[]
+max=0
 for i in range(a):
-    k=list(map(int,input().split()))
-    if len(k)==b:
-        l.append(k)
-        
-e=0
-o=0
+    n=list(map(int,input().split()))
+    if len(n)==b:
+        k.append(n)
 for j in range(b):
     for i in range(a):
-        e+=l[i][j]
-    if o<e:
-        o=e
-    e=0
-print(o)
-    
+       s+=k[i][j]
+    if s>max:
+        max=s
+    s=0
+print(max)
