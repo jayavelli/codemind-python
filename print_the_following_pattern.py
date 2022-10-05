@@ -1,7 +1,6 @@
 n=int(input())
-for i in range(1,n+1):
-    for j in range(1,n-1):
-        print(j,end="")
-    for k in reversed(range(1,j)):
-        print(k,end="")
+v="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+for i in range(n):
+    for j in range(i,n):
+        print(v[n-i-1],end=" ")
     print()
