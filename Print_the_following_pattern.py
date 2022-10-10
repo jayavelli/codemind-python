@@ -1,8 +1,15 @@
 n=int(input())
-for i in reversed(range(1,n+1)):
-    for j in reversed(range(1,n+1)):
-        if i==j or i+j==n+1:
-            print(i,end=" ")
-        else:
-            print(" ",end="")
+s="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+q=0
+k = n-1
+for i in range(0, n):
+    for j in range(0, k):
+        print(end=" ")
+    k-=1
+    for j in range(0,i+1):
+        print(s[j], end="")
+        q+=1
+    for j in range(i-1,-1,-1):
+        print(s[j], end="")
+        q-=1
     print()
